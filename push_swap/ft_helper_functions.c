@@ -62,20 +62,16 @@ void	ft_push(t_stack **head, int data)
 	*head = new_node;
 }
 
-int checkLeadingSpace(const char *str) {
-    if (!str) {
-        return 0; // Handle NULL pointer
+int checkLeadingSpace(const char *str)
+{
+    if (!str)
+        return 0;
+    const char *ptr = str;
+    while (*ptr != '\0')
+	{
+        if (*ptr == ' ')
+            return 1;
+        ptr++;
     }
-
-    const char *ptr = str; // Initialize pointer to the beginning of the string
-
-    // Iterate through the characters of the string using a while loop
-    while (*ptr != '\0') {
-        if (*ptr == ' ') {
-            return 1; // Leading space found
-        }
-        ptr++; // Move to the next character
-    }
-
-    return 0; // No leading space
+    return 0;
 }
