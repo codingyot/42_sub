@@ -1,64 +1,33 @@
 NAME = push_swap
+CHECKER = checker
+FLAGS = -Wall -Wextra -Werror -I./get_next_line/*.c
 CC = cc
-RM = rm -f
-FLAGS = -Wall -Wextra -Werror
-LIBFTDIR = libft/
-OBJ_DIR = obj/
-BONUS = checker
-SRC_DIR = srcs/
 
-SRC_1 = srcs/push_swap/push_swap.c
+SRC = operation_a.c operations_helper.c push_swap.c push_swap_utils.c \
+      b_operation.c operations_helper_one.c parse_args.c split_operation.c \
+      sorting_algorithms.c list_operation.c sort.c ft_str_join.c \
+      ft_radix.c instructions_radix.c ft_helper_functions.c ft_valid.c
 
-SRC_2 =	srcs/push_swap/b_operation.c \
-		srcs/push_swap/ft_valid.c \
-		srcs/push_swap/sort.c \
-		srcs/push_swap/ft_helper_functions.c \
-		srcs/push_swap/instructions_radix.c \
-		srcs/push_swap/operations_helper.c \
-		srcs/push_swap/sorting_algorithms.c \
-		srcs/push_swap/ft_radix.c \
-		srcs/push_swap/list_operation.c \
-		srcs/push_swap/operations_helper_one.c \
-		srcs/push_swap/split_operation.c \
-		srcs/push_swap/ft_str_join.c \
-		srcs/push_swap/parse_args.c \
-		srcs/push_swap/push_swap_utils.c\
-		srcs/push_swap/main.c \
-		srcs/push_swap/operation_a.c \
+OBJ = $(SRC:.c=.o)
+MAIN_SORT_SRC = main.c
+MAIN_CHECKER_SRC = checker.c
 
-
-BONUS_SRC = srcs/checker/checker.c \
-			srcs/checker/checker_utils.c
-
-OBJ_1 = ${SRC_1:.c=.o}
-OBJ_2 = ${SRC_2:.c=.o}
-BONUS_OBJ = ${BONUS_SRC:.c=.o}
-
-INCLUDE = -I ./push_swap/push_swap.h
-
+all: $(NAME) $(CHECKER)
+$(NAME): $(OBJ) main.o
+	$(CC) $(FLAGS) -o $(NAME) $(OBJ) main.o
+bonus: $(OBJ) checker.o
+	$(CC) $(FLAGS) -o $(CHECKER) $(OBJ) checker.o ./get_next_line/*.c
+$(CHECKER): $(OBJ) checker.o
+	$(CC) $(FLAGS) -o $(CHECKER) $(OBJ) checker.o ./get_next_line/*.c
+main.o: $(MAIN_SORT_SRC)
+	$(CC) $(FLAGS) -c $(MAIN_SORT_SRC) -o main.o
+checker.o: $(MAIN_CHECKER_SRC)
+	$(CC) $(FLAGS) -c $(MAIN_CHECKER_SRC) -o checker.o
 %.o: %.c
-	${CC} -c $< -o $@
-
-${NAME}: ${OBJ_1} ${OBJ_2}
-	make -C $(LIBFTDIR)
-	${CC} ${FLAGS} ${OBJ_1} ${OBJ_2} -o ${NAME} ${INCLUDE}
-
-${BONUS}: ${OBJ_2} ${BONUS_OBJ} 
-	make -C $(LIBFTDIR)
-	${CC} ${FLAGS} ${BONUS_OBJ} ${OBJ_2} -o ${BONUS} ${INCLUDE}
-
-all: ${NAME} ${BONUS}
-
-bonus: ${BONUS} 
-
+	$(CC) $(FLAGS) -c $< -o $@
 clean:
-	${RM} ${OBJ_1} ${OBJ_2} ${BONUS_OBJ} ${NAME} ${BONUS}
-	cd $(LIBFTDIR) && $(MAKE) clean
-
+	rm -rf $(OBJ) $(NAME) $(CHECKER) main.o checker.o
 fclean: clean
-	${RM} ${NAME}
-	cd $(LIBFTDIR) && $(MAKE) fclean
-
-re: clean all
-
-.PHONY: all clean fclean re bonus
+	rm -f $(NAME) $(bonus)
+re: fclean all
+.PHONY: all clean fclean re
