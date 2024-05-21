@@ -61,7 +61,7 @@ void	ft_parse(t_stack **stack_a, char *args[])
 	i = -1;
 	join_args = ft_strjoin(args);
 	str = ft_split(join_args, ' ');
-	while (str[++i] != NULL )
+	while (str[++i] != NULL)
 	{
 		if (ft_check_ascii(str[i]) || ft_check_overflow(ft_atoi(str[i])))
 		{
@@ -73,7 +73,6 @@ void	ft_parse(t_stack **stack_a, char *args[])
 		}
 		else
 			ft_stack_append(stack_a, ft_atoi(str[i]));
-
 	}
 	free(join_args);
 	free_str_array(str);

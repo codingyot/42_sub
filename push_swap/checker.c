@@ -71,7 +71,7 @@ int	main(int argc, char *argv[])
 	stack_b = NULL;
 	if (argv[1] == NULL)
 		return (0);
-	if (ft_std_out(argv[1], "") == 0)
+	if (ft_std_out(argv[1], "") == 0 || checkLeadingSpace(argv[1]) == 1)
 	{
 		ft_error();
 		return (0);

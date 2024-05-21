@@ -15,10 +15,10 @@ int	main(int ac, char *argv[])
 			return (0);
 		}
 		ft_parse(&stack_a, argv);
-		if (ft_is_sorted(stack_a) && !ft_duplicate(stack_a))
-			ft_sort_num(&stack_a, &stack_b);
-		else if (ft_duplicate(stack_a))
+		if (ft_duplicate(stack_a))
 			ft_error();
+		else if (ft_is_sorted(stack_a) == 1 && !ft_duplicate(stack_a))
+			ft_sort_num(&stack_a, &stack_b);
 		else if (ac == 2 || !ft_is_sorted(stack_a))
 			return (ft_free_stack(stack_a),0);
 		ft_free_stack(stack_a);
