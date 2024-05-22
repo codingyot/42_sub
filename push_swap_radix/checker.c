@@ -1,4 +1,14 @@
-
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   checker.c                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: oallan <oallan@student.42abudhabi.ae>      +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/05/22 15:17:10 by oallan            #+#    #+#             */
+/*   Updated: 2024/05/22 15:18:19 by oallan           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 #include "push_swap.h"
 
 int	ft_comapare_command(char *cml, t_stack **stack_a, t_stack_b **stack_b)
@@ -65,13 +75,13 @@ int	main(int argc, char *argv[])
 	t_stack		*stack_a;
 	t_stack_b	*stack_b;
 
-	if (argc < 1)
-		return (0);
 	stack_a = NULL;
 	stack_b = NULL;
+	if (argc < 1 && ft_run_through(argv))
+		return (0);
 	if (argv[1] == NULL)
 		return (0);
-	if (ft_std_out(argv[1], "") == 0 || checkLeadingSpace(argv[1]) == 1)
+	if (ft_std_out(argv[1], "") == 0)
 	{
 		ft_error();
 		return (0);

@@ -1,6 +1,6 @@
 NAME = push_swap
 CHECKER = checker
-FLAGS = -Wall -Wextra -Werror -I./get_next_line/*.c
+FLAGS = -Wall -Wextra -Werror -I./get_next_line/*.c 
 CC = cc
 
 SRC = operation_a.c operations_helper.c push_swap.c push_swap_utils.c \

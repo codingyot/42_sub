@@ -1,4 +1,32 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   parse_args.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: oallan <oallan@student.42abudhabi.ae>      +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/05/22 16:16:13 by oallan            #+#    #+#             */
+/*   Updated: 2024/05/22 16:44:25 by oallan           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 #include "push_swap.h"
+
+int	ft_run_through(char *argv[])
+{
+	int	i;
+
+	i = 1;
+	while (argv[i])
+	{
+		if (!ft_strcmp(argv[i], " ") || argv[i][0] == '\0')
+		{
+			write(1, "Error\n", 7);
+			return (0);
+		}
+		i++;
+	}
+	return (1);
+}
 
 t_stack	*ft_stack_end(t_stack *head)
 {
@@ -63,7 +91,7 @@ void	ft_parse(t_stack **stack_a, char *args[])
 	str = ft_split(join_args, ' ');
 	while (str[++i] != NULL)
 	{
-		if (ft_check_ascii(str[i]) || ft_check_overflow(ft_atoi(str[i])))
+		if (ft_check_ascii(str[i]) || ft_check_overflow(str[i]))
 		{
 			ft_error();
 			free(join_args);
