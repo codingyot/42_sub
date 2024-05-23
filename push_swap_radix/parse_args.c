@@ -20,7 +20,7 @@ int	ft_run_through(char *argv[])
 	{
 		if (!ft_strcmp(argv[i], " ") || argv[i][0] == '\0')
 		{
-			write(1, "Error\n", 7);
+			ft_putstr_fd("Error\n", 2);
 			return (0);
 		}
 		i++;

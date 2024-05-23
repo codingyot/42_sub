@@ -15,7 +15,6 @@
 # include <unistd.h>
 # include <stdlib.h>
 # include <limits.h>
-# include "get_next_line/get_next_line.h"
 
 typedef struct s_stack
 {
@@ -91,4 +90,5 @@ int				ft_valid_stdin(char *str);
 int				ft_strcmp(const char *s1, const char *s2);
 int				ft_run_through(char *argv[]);
 int				ft_check_overflow(char *argv);
+void			ft_putstr_fd(char *s, int fd);
 #endif

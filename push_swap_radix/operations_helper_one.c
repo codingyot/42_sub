@@ -18,7 +18,7 @@ int	ft_is_integer(int n)
 
 void	ft_error(void)
 {
-	ft_putstr("Error!");
+	ft_putstr_fd("Error\n", 2);
 	return ;
 }
 

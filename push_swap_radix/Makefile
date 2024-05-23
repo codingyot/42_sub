@@ -1,6 +1,5 @@
 NAME = push_swap
-CHECKER = checker
-FLAGS = -Wall -Wextra -Werror -I./get_next_line/*.c 
+FLAGS = -Wall -Wextra -Werror 
 CC = cc
 
 SRC = operation_a.c operations_helper.c push_swap.c push_swap_utils.c \
@@ -10,23 +9,16 @@ SRC = operation_a.c operations_helper.c push_swap.c push_swap_utils.c \
 
 OBJ = $(SRC:.c=.o)
 MAIN_SORT_SRC = main.c
-MAIN_CHECKER_SRC = checker.c
 
-all: $(NAME) $(CHECKER)
+all: $(NAME)
 $(NAME): $(OBJ) main.o
 	$(CC) $(FLAGS) -o $(NAME) $(OBJ) main.o
-bonus: $(OBJ) checker.o
-	$(CC) $(FLAGS) -o $(CHECKER) $(OBJ) checker.o ./get_next_line/*.c
-$(CHECKER): $(OBJ) checker.o
-	$(CC) $(FLAGS) -o $(CHECKER) $(OBJ) checker.o ./get_next_line/*.c
 main.o: $(MAIN_SORT_SRC)
 	$(CC) $(FLAGS) -c $(MAIN_SORT_SRC) -o main.o
-checker.o: $(MAIN_CHECKER_SRC)
-	$(CC) $(FLAGS) -c $(MAIN_CHECKER_SRC) -o checker.o
 %.o: %.c
 	$(CC) $(FLAGS) -c $< -o $@
 clean:
-	rm -rf $(OBJ) $(NAME) $(CHECKER) main.o checker.o
+	rm -rf $(OBJ) $(NAME)
 fclean: clean
 	rm -f $(NAME) $(bonus)
 re: fclean all
