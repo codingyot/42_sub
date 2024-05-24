@@ -1,7 +1,4 @@
-<h1 align="center">
-  <img src="https://github.com/jotavare/jotavare/blob/main/42/banners/resources/github_resources_banner_resources.png">
-</h1>
-
+<h1>42 LEARNING RESOURCES</h1>
 <p align="center">
 	<img src="https://img.shields.io/badge/status-ongoing-success?color=%2312bab9&style=flat-square" />
 	<img src="https://img.shields.io/badge/score-42%20%2F%2042-success?color=%2312bab9&style=flat-square" />
