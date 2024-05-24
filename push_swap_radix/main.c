@@ -20,11 +20,6 @@ int	main(int ac, char *argv[])
 	stack_b = NULL;
 	if (ac > 1 && ft_run_through(argv))
 	{
-		if (ft_std_out(argv, " ") == 0)
-		{
-			ft_error();
-			return (0);
-		}
 		ft_parse(&stack_a, argv);
 		if (ft_duplicate(stack_a))
 			ft_error();

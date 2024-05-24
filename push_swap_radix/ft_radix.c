@@ -11,22 +11,6 @@
 /* ************************************************************************** */
 #include "push_swap.h"
 
-int ft_std_out(char **s1, const char *s2)
-{
-    int i = 0;
-    
-    if (s1[i])
-    {
-        while (s1[i])
-        {
-            if (ft_strcmp(s1[i], s2) == 0) 
-                return 0;
-            i++;
-        }
-    }
-    return 1;
-}
-
 t_stack	*ft_get_min(t_stack **stack)
 {
 	t_stack	*head;
