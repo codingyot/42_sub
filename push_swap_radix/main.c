@@ -15,12 +15,12 @@ int	main(int ac, char *argv[])
 {
 	t_stack	*stack_a;
 	t_stack	*stack_b;
-
+	
 	stack_a = NULL;
 	stack_b = NULL;
 	if (ac > 1 && ft_run_through(argv))
 	{
-		if (ft_std_out(argv[1], "") == 0)
+		if (ft_std_out(argv, " ") == 0)
 		{
 			ft_error();
 			return (0);

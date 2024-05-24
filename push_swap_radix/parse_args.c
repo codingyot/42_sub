@@ -18,7 +18,7 @@ int	ft_run_through(char *argv[])
 	i = 1;
 	while (argv[i])
 	{
-		if (!ft_strcmp(argv[i], " ") || argv[i][0] == '\0')
+		if (argv[i][0] == '\0')
 		{
 			ft_putstr_fd("Error\n", 2);
 			return (0);

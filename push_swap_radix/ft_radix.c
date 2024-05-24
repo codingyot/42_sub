@@ -9,22 +9,22 @@
 /*   Updated: 2024/05/22 16:04:49 by oallan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
 #include "push_swap.h"
 
-int	ft_std_out(const char *s1, const char *s2)
+int ft_std_out(char **s1, const char *s2)
 {
-	if (s1)
-	{
-		while (((*s1) || *s2))
-		{
-			if (*s1 != *s2)
-				return ((unsigned char) *s1 - (unsigned char)*s2);
-			s1 ++;
-			s2 ++;
-		}
-	}
-	return (0);
+    int i = 0;
+    
+    if (s1[i])
+    {
+        while (s1[i])
+        {
+            if (ft_strcmp(s1[i], s2) == 0) 
+                return 0;
+            i++;
+        }
+    }
+    return 1;
 }
 
 t_stack	*ft_get_min(t_stack **stack)
