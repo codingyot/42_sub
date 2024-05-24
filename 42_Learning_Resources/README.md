@@ -1,12 +1,4 @@
 <h1>42 LEARNING RESOURCES</h1>
-<p align="center">
-	<img src="https://img.shields.io/badge/status-ongoing-success?color=%2312bab9&style=flat-square" />
-	<img src="https://img.shields.io/badge/score-42%20%2F%2042-success?color=%2312bab9&style=flat-square" />
-	<img src="https://img.shields.io/badge/links-+1150-1150?color=%2312bab9&style=flat-square" />
-	<img src="https://img.shields.io/github/last-commit/jotavare/42-resources?color=%2312bab9&style=flat-square" />
-	<a href='https://www.linkedin.com/in/joaoptoliveira' target="_blank"><img alt='Linkedin' src='https://img.shields.io/badge/LinkedIn-100000?style=flat-square&logo=Linkedin&logoColor=white&labelColor=0A66C2&color=0A66C2'/></a>
-	<a href='https://profile.intra.42.fr/users/jotavare' target="_blank"><img alt='42' src='https://img.shields.io/badge/Porto-100000?style=flat-square&logo=42&logoColor=white&labelColor=000000&color=000000'/></a>
-</p>
 
 <p align="center">
 	<a href="#---1">Information and Facts</a> •
@@ -25,11 +17,6 @@ Here, you’ll find a set of resources that proved helpful during my time at 42 
 > [!NOTE]
 > If you have a link or a correction to suggest, please don’t hesitate to do a pull request or contact me. I highly value any contributions and will evaluate them for possible inclusion in the repository.
 
-- - - -
-
-<h1 align="center">
-  <img src="https://github.com/jotavare/jotavare/blob/main/42/banners/resources/github_resources_banner_information.png">
-</h1>
 
 <p align="center">
 	<a href="#trivia">Trivia</a> •
@@ -96,10 +83,6 @@ For a specific 42 school social media, check the section [Campuses](#---6) and c
 | [Unofficial Discord](https://discord.gg/wsrkKE4) | Unofficial Discord server related to 42 Network. | `Discord` |
 
 - - - -
-
-<h1 align="center">
-  <img src="https://github.com/jotavare/jotavare/blob/main/42/banners/resources/github_resources_banner_piscine_and_common_core.png">
-</h1>
 
 <p align="center">
 	<a href="#exams">Exams</a> •
@@ -285,10 +268,6 @@ Resources of no particular order but that I feel you should know.
 | [C Static libraries](https://dev.to/iamkhalil42/all-you-need-to-know-about-c-static-libraries-1o0b) | All you need to know about C static libraries.                                   | `Website` |
 
 - - - -
-
-<h1 align="center">
-  <img src="https://github.com/jotavare/jotavare/blob/main/42/banners/resources/github_resources_banner_common_core_projects.png">
-</h1>
 
 <p align="center">
 	<a href="#subjects">Subjects</a> •
