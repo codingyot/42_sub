@@ -23,7 +23,7 @@ int	main(int ac, char *argv[])
 		ft_parse(&stack_a, argv);
 		if (ft_duplicate(stack_a))
 			ft_error();
-		else if (ft_is_sorted(stack_a) == 1 && !ft_duplicate(stack_a))
+		else if (ft_is_sorted(stack_a))
 			ft_sort_num(&stack_a, &stack_b);
 		else if (ac == 2 || !ft_is_sorted(stack_a))
 			return (ft_free_stack(stack_a), 0);
