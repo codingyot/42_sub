@@ -26,7 +26,7 @@
 # define PTR_NULL "(nil)"
 
 # ifndef BUFFER_SIZE
-#  define BUFFER_SIZE 1024
+#  define BUFFER_SIZE 10240
 # endif
 
 typedef struct s_list

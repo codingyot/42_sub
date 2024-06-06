@@ -1,6 +1,6 @@
 #include "../fdf_header_files/fdf.h"
 
-void fun3()
+void error_mgt()
 {
-    ft_printf("hello\n");
+    ft_putstr_fd("Error\n", 2);
 }
